@@ -7,13 +7,13 @@ Description: A shell script that creates a C++ makefile.
 
 How to use:
 
-  maker <filename.cpp>
+  maker filename.cpp
   // filename should contain the main entrypoint
   
   -v
   // verbose: tell user what is being done (WIP)
   
-  -n <outputname>
+  -n outputname
   // name: changes the name of the output executable (WIP)
   
   -g
