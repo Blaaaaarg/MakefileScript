@@ -78,7 +78,9 @@ then
     echo "Building the makefile..."
 fi
 
-echo $programname.x : $(builddeplist) > makefile
+echo -e "#"Makefile created by maker v1.2"\t"github.com/Blaaaaarg/MakefileScript > makefile
+
+echo $programname.x : $(builddeplist) >> makefile
 
 if [ "$debug" = "true" ]
 then
@@ -125,10 +127,7 @@ then
     fi
 
     echo run : >> makefile
-    echo -e "\t"./$programname.x >> makefile
-
-    echo export : >> makefile
-    echo -e "\t"cp $programname.x ~/bin/$programname >> makefile
+    echo -e -n "\t"./$programname.x"\n" >> makefile
 fi
 
 if [ "$verbose" = "true" ]
