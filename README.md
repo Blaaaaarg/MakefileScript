@@ -5,44 +5,54 @@ Created by Scott Walker
 
 Description: A shell script that creates a C++ makefile.
 
-How to use:
+==============
+= How to use =
+==============
 
-  maker filename.cpp
-  // filename should contain the main entrypoint
+maker filename.cpp
+/ filename should contain the main entrypoint
   
-  -v
-  // verbose: tell user what is being done (WIP)
+-v
+/ verbose: tell user what is being done (WIP)
   
-  -n outputname
-  // name: changes the name of the output executable (WIP)
+-n outputname
+/ name: changes the name of the output executable (WIP)
   
-  -g
-  // debug: run compiler with -g flag and add a debug command to the makefile
+-g
+/ debug: run compiler with -g flag and add a debug command to the makefile
   
-  -m
-  // minimal: only create compiler commands in makefile
-  
-Example:
+-m
+//minimal: only create compiler commands in makefile
 
-  maker foo.cpp -v -g -n bar
-  // builds a makefile for foo.cpp, tells the user what maker is doing, compiles for debugging, 
-  // and names the executable bar.x
-  
-Install:
+===========
+= Example =
+===========
 
-  git clone git://github.com/Blaaaaarg/MakefileScript.git
-  cd MakefileScript
-  mv maker.sh ~/bin/maker
-  
-  Note: this will only work if ~/bin/ is in your PATH variable but it should be by default.
-  
-Known issues:
+maker foo.cpp -v -g -n bar
+/ builds a makefile for foo.cpp, tells the user what maker is doing, compiles for debugging,
+/ and names the executable bar.x
 
-  -n gets confused unless it is the last flag passed. Make sure you do this or makefile will likely not work right.
-  
-Future updates:
+===========  
+= Install =
+===========
 
-  - add support for gcc so it works for both compilers and can be used for C code
-  - fix the -n issue
-  - find other useful options
-  - make -v more interesting
+1. git clone git://github.com/Blaaaaarg/MakefileScript.git
+2. cd MakefileScript
+3. mv maker.sh ~/bin/maker
+  
+Note: this will only work if ~/bin/ is in your PATH variable but it should be by default.
+  
+================
+= Known issues =
+================
+
+-n gets confused unless it is the last flag passed. Make sure you do this or makefile will likely not work right.
+
+==================  
+= Future updates =
+==================
+
+- add support for gcc so it works for both compilers and can be used for C code
+- fix the -n issue
+- find other useful options
+- make -v more interesting
