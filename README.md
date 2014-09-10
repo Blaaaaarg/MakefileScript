@@ -1,6 +1,6 @@
 MakefileScript
 ==============
-Maker v1.2
+Maker v1.4
 Created by Scott Walker
 
 Description: A shell script that creates a C++ makefile.
@@ -9,14 +9,13 @@ Description: A shell script that creates a C++ makefile.
  How to use 
 ==============
 
-maker filename.cpp
-> filename should contain the main entrypoint
+Type 'maker' in your project directory with any of the following flags (or none)
   
 -v
-> verbose: tell user what is being done (WIP)
+> verbose: tell user what is being done
   
 -n outputname
-> name: changes the name of the output executable (WIP)
+> name: changes the name of the output executable
   
 -g
 > debug: run compiler with -g flag and add a debug command to the makefile
@@ -24,11 +23,21 @@ maker filename.cpp
 -m
 > minimal: only create compiler commands in makefile
 
+-d
+> compile by default: compile your project with make after the makefile has been completed
+
+-df
+> compile by default (forced): compile your project with make after the makefile has been
+> completed and don't check for overwrites
+
+-gcc
+> use gcc: normally it defaults to g++
+
 ===========
  Example 
 ===========
 
-maker foo.cpp -v -g -n bar
+maker foo.cpp -v -g -n bar.x
 > builds a makefile for foo.cpp, tells the user what maker is doing, compiles for debugging,
 > and names the executable bar.x
 
@@ -43,16 +52,15 @@ maker foo.cpp -v -g -n bar
 Note: this will only work if ~/bin/ is in your PATH variable but it should be by default.
   
 ================
- Known issues 
+ Known bugs 
 ================
 
--n gets confused unless it is the last flag passed. Make sure you do this or makefile will likely not work right.
+- the d flag will check in subdirectories for files with the same name
+- Using this on programs like cygwin might not work unless you use the dos2unix command
 
 ==================  
  Future updates 
 ==================
 
-- add support for gcc so it works for both compilers and can be used for C code
-- fix the -n issue
-- find other useful options
-- make -v more interesting
+- add support for .c files
+- find more useful features
