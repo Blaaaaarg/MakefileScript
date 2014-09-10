@@ -21,7 +21,7 @@ Type 'maker' in your project directory with any of the following flags (or none)
 > debug: run compiler with -g flag and add a debug command to the makefile
   
 -m
-> minimal: only create compiler commands in makefile
+> minimal: only create compiler commands in the makefile
 
 -d
 > compile by default: compile your project with make after the makefile has been completed
@@ -37,9 +37,9 @@ Type 'maker' in your project directory with any of the following flags (or none)
  Example 
 ===========
 
-maker foo.cpp -v -g -n bar.x
-> builds a makefile for foo.cpp, tells the user what maker is doing, compiles for debugging,
-> and names the executable bar.x
+maker -v -g -n bar.x
+> builds a makefile in the current directory, tells the user what maker is doing, 
+> compiles for debugging, and names the executable bar.x
 
 ===========  
  Install 
